@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion = '29.0.3'
+    defaultConfig {
+        applicationId "com.tawktest"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled = true
+    }
+    buildTypes {
+
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField "String", "BASE_URL", '"https://api.github.com/"'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    buildFeatures{
+        dataBinding true
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // Kotlin
+    implementation "androidx.core:core-ktx:$versions.core_ktx"
+
+    // AndroidX
+    implementation "androidx.appcompat:appcompat:$versions.appcompat"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.constraint_layout"
+    implementation "com.google.android.material:material:$versions.material"
+
+    // Room
+    implementation "androidx.room:room-runtime:$versions.room_version"
+    kapt "androidx.room:room-compiler:$versions.room_version"
+
+    // Retrofit using RxJava2, Okhttp, Okhttp logging interceptor, Gson
+    implementation "com.squareup.retrofit2:retrofit:$versions.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$versions.gson_converter"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$versions.adapter_rxjava"
+    implementation "com.squareup.okhttp3:logging-interceptor:$versions.logging_interceptor"
+
+    // RxJava
+    implementation "io.reactivex.rxjava3:rxjava:$versions.rx_java"
+
+    // Coil
+    implementation "io.coil-kt:coil:$versions.coil"
+
+    // Facebook shimmer
+    implementation "com.facebook.shimmer:shimmer:$versions.shimmer"
+
+    // Dagger dependencies
+    implementation "com.google.dagger:dagger:$versions.dagger"
+    implementation "com.google.dagger:dagger-android-support:$versions.dagger"
+    kapt "com.google.dagger:dagger-android-processor:$versions.dagger"
+    kapt "com.google.dagger:dagger-compiler:$versions.dagger"
+
+    // Testing
+    testImplementation "junit:junit:$versions.junit"
+    androidTestImplementation "androidx.test:core:$versions.test_core"
+    androidTestImplementation "androidx.test:runner:$versions.runner"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espresso_core"
+}

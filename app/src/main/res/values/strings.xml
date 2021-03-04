@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tawktest</string>
+    <string name="write_here">Write here…</string>
+    <string name="save">Save</string>
+    <string name="notes">Notes:</string>
+    <string name="followers">Followers:</string>
+    <string name="following">Following:</string>
+    <string name="ohh_no">Ohh no!!</string>
+    <string name="enable_data_connection_message">It seems you do not have network access, Please try again or enable data connection/wifi.</string>
+    <string name="retry">Retry</string>
+    <string name="image">image</string>
+    <string name="saved">Saved</string>
+    <string name="cancel">Cancel</string>
+</resources>
