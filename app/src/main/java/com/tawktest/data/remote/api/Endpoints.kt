@@ -1,9 +1,6 @@
 package com.tawktest.data.remote.api
 
-/**
- * @author Avinash Kumar
- * @mail avisingh736@gmail.com
- */
+
 
 class Endpoints {
     companion object {

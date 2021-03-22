@@ -4,10 +4,7 @@ import androidx.lifecycle.ViewModel
 import dagger.MapKey
 import kotlin.reflect.KClass
 
-/**
- * @author Avinash Kumar
- * @mail avisingh736@gmail.com
- */
+
 
 @Target(
         AnnotationTarget.FUNCTION,

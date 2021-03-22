@@ -7,10 +7,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.QueryMap
 
-/**
- * @author Avinash Kumar
- * @mail avisingh736@gmail.com
- */
+
 
 interface Apis {
 

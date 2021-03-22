@@ -19,10 +19,7 @@ import com.tawktest.ui.base.BaseActivity
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
-/**
- * @author Avinash Kumar
- * @mail avisingh736@gmail.com
- */
+
 
 class UserDetailActivity : BaseActivity() {
     @Inject

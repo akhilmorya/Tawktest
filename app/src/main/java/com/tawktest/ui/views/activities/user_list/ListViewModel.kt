@@ -13,10 +13,7 @@ import retrofit2.Call
 import retrofit2.Response
 import javax.inject.Inject
 
-/**
- * @author Avinash Kumar
- * @mail avisingh736@gmail.com
- */
+
 
 class ListViewModel @Inject constructor(private val apis: Apis, private val database: Database) :
         ViewModel() {

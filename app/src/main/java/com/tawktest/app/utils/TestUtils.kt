@@ -3,10 +3,7 @@ package com.tawktest.app.utils
 import com.google.gson.Gson
 import com.tawktest.data.models.User
 
-/**
- * @author Avinash Kumar
- * @mail avisingh736@gmail.com
- */
+
 
 class TestUtils {
 

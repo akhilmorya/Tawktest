@@ -3,10 +3,7 @@ package com.tawktest.data.local
 import androidx.room.*
 import com.tawktest.data.models.User
 
-/**
- * @author Avinash Kumar
- * @mail avisingh736@gmail.com
- */
+
 
 @Dao
 interface UserDao {

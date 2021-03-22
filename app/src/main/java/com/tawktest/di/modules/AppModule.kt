@@ -7,10 +7,7 @@ import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
-/**
- * @author Avinash Kumar
- * @mail avisingh736@gmail.com
- */
+
 
 @Module
 class AppModule {

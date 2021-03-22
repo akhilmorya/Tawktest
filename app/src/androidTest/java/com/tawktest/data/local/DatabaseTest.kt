@@ -13,10 +13,6 @@ import org.junit.runner.RunWith
 import java.io.IOException
 import java.lang.Exception
 
-/**
- * @author Avinash Kumar
- * @mail avisingh736@gmail.com
- */
 
 @RunWith(AndroidJUnit4ClassRunner::class)
 class DatabaseTest : TestCase() {

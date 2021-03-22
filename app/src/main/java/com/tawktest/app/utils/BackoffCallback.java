@@ -8,10 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import retrofit2.Call;
 import retrofit2.Callback;
 
-/**
- * @author Avinash Kumar
- * @mail avisingh736@gmail.com
- */
+
 
 public abstract class BackoffCallback<T> implements Callback<T> {
     private static final int RETRY_COUNT = 3;

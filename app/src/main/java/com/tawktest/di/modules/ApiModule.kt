@@ -20,10 +20,6 @@ import java.io.File
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
-/**
- * @author Avinash Kumar
- * @mail avisingh736@gmail.com
- */
 
 @Module
 class ApiModule {

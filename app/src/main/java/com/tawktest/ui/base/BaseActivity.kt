@@ -12,10 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.tawktest.R
 import com.tawktest.app.utils.NetworkUtils
 
-/**
- * @author Avinash Kumar
- * @mail avisingh736@gmail.com
- */
+
 
 abstract class BaseActivity : AppCompatActivity() {
 

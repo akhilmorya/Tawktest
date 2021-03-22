@@ -3,10 +3,7 @@ package com.tawktest.app.utils
 import android.content.Context
 import android.util.TypedValue
 
-/**
- * @author Avinash Kumar
- * @mail avisingh736@gmail.com
- */
+
 
 object Units {
     fun dpToPx(dp: Float, context: Context): Int {

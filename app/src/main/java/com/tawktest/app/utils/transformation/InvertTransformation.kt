@@ -10,10 +10,7 @@ import coil.transform.GrayscaleTransformation
 import coil.transform.Transformation
 import com.tawktest.app.utils.Utils
 
-/**
- * @author Avinash Kumar
- * @mail avisingh736@gmail.com
- */
+
 
 class InvertTransformation : Transformation {
     override fun key(): String = GrayscaleTransformation::class.java.name

@@ -8,10 +8,7 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
-/**
- * @author Avinash Kumar
- * @mail avisingh736@gmail.com
- */
+
 
 @Entity(indices = [Index(value = ["id", "login"], unique = true)])
 @Parcelize
