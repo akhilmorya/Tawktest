@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.tawktest.ui.custom.CircleImageView
+        android:id="@+id/civAvatar"
+        android:src="@color/colorGrey"
+        android:layout_width="70dp"
+        android:layout_height="70dp"/>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvTitle"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="4dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/colorBlack"
+            android:background="@color/colorGrey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvDescription"
+            android:textSize="16sp"
+            android:layout_marginTop="2dp"
+            android:paddingBottom="4dp"
+            android:background="@color/colorGrey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/ivNote"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@color/colorGrey"
+        android:contentDescription="@string/image" />
+</LinearLayout>
