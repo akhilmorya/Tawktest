@@ -8,8 +8,6 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
-
-
 @Entity(indices = [Index(value = ["id", "login"], unique = true)])
 @Parcelize
 data class User(

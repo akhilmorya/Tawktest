@@ -12,8 +12,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.tawktest.R
 import com.tawktest.app.utils.NetworkUtils
 
-
-
 abstract class BaseActivity : AppCompatActivity() {
 
     private lateinit var nDialog: AlertDialog

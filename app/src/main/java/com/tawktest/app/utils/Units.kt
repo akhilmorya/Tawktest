@@ -3,8 +3,6 @@ package com.tawktest.app.utils
 import android.content.Context
 import android.util.TypedValue
 
-
-
 object Units {
     fun dpToPx(dp: Float, context: Context): Int {
         return TypedValue.applyDimension(

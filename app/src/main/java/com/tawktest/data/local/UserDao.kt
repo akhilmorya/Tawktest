@@ -3,8 +3,6 @@ package com.tawktest.data.local
 import androidx.room.*
 import com.tawktest.data.models.User
 
-
-
 @Dao
 interface UserDao {
 

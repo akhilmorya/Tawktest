@@ -5,8 +5,6 @@ import com.tawktest.ui.views.activities.user_list.ListActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
-
-
 @Module
 abstract class ActivityModule {
 

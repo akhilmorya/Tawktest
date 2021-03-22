@@ -24,8 +24,6 @@ import com.tawktest.ui.views.activities.user_details.UserDetailActivity
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
-
-
 class ListActivity : BaseActivity() {
     @Inject
     lateinit var viewModelFactory: ViewModelFactory

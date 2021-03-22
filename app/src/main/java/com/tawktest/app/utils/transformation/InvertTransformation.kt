@@ -10,8 +10,6 @@ import coil.transform.GrayscaleTransformation
 import coil.transform.Transformation
 import com.tawktest.app.utils.Utils
 
-
-
 class InvertTransformation : Transformation {
     override fun key(): String = GrayscaleTransformation::class.java.name
 

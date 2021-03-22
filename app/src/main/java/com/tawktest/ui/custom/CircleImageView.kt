@@ -12,8 +12,6 @@ import androidx.annotation.DrawableRes
 import androidx.appcompat.widget.AppCompatImageView
 import com.tawktest.R
 
-
-
 class CircleImageView : AppCompatImageView {
     private val mDrawableRect = RectF()
     private val mBorderRect = RectF()

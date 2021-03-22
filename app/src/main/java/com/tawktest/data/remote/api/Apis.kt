@@ -8,7 +8,6 @@ import retrofit2.http.Path
 import retrofit2.http.QueryMap
 
 
-
 interface Apis {
 
     @GET(Endpoints.USERS)

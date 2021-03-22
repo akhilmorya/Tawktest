@@ -1,7 +1,5 @@
 package com.tawktest.data
 
-
-
 class Resource<out T> private constructor(
         val status: Status,
         val message: String? = null,

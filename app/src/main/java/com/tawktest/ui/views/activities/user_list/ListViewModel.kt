@@ -13,8 +13,6 @@ import retrofit2.Call
 import retrofit2.Response
 import javax.inject.Inject
 
-
-
 class ListViewModel @Inject constructor(private val apis: Apis, private val database: Database) :
         ViewModel() {
     private val usersLive = MutableLiveData<Resource<Any>>()

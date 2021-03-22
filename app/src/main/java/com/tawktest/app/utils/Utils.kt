@@ -1,7 +1,5 @@
 package com.tawktest.app.utils
 
-
-
 class Utils {
     companion object {
 

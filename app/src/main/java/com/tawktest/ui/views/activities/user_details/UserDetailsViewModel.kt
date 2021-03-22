@@ -12,8 +12,6 @@ import retrofit2.Call
 import retrofit2.Response
 import javax.inject.Inject
 
-
-
 class UserDetailsViewModel @Inject constructor(
         private val apis: Apis,
         private val database: Database

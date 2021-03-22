@@ -11,7 +11,6 @@ import dagger.android.AndroidInjector
 import javax.inject.Singleton
 
 
-
 @Singleton
 @Component(modules = [AppModule::class, ApiModule::class, AndroidInjectionModule::class, ActivityModule::class])
 interface AppComponent : AndroidInjector<Tawktest> {

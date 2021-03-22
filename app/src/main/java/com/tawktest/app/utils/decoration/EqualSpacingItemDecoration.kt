@@ -6,8 +6,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 
-
-
 class EqualSpacingItemDecoration @JvmOverloads constructor(
         private val spacing: Int,
         private var displayMode: Int = -1

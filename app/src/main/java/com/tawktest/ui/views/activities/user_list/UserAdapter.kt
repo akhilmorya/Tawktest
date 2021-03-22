@@ -14,8 +14,6 @@ import com.tawktest.app.utils.transformation.InvertTransformation
 import com.tawktest.data.models.User
 import com.tawktest.databinding.SingleItemUserBinding
 
-
-
 class UserAdapter(private val users: MutableList<User>, val callback: (User) -> Unit) :
         RecyclerView.Adapter<UserAdapter.UserHolder>(), Filterable {
 

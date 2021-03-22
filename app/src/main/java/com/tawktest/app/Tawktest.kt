@@ -9,8 +9,6 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import javax.inject.Inject
 
-
-
 class Tawktest : Application(), HasAndroidInjector {
 
     @Inject
