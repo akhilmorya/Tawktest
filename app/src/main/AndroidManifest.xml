@@ -18,10 +18,10 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".ui.views.activities.user_details.UserDetailActivity"
-            android:configChanges="orientation" />
+            android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
             android:name=".ui.views.activities.user_list.ListActivity"
-            android:configChanges="orientation">
+            android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

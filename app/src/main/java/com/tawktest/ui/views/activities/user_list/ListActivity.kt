@@ -1,9 +1,11 @@
 package com.tawktest.ui.views.activities.user_list
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.widget.SearchView
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
@@ -33,6 +35,9 @@ class ListActivity : BaseActivity() {
     private lateinit var scrollListener: EndlessRecyclerViewScrollListener
     private lateinit var userAdapter: UserAdapter
     private var handler: Handler? = null
+    private val getContent = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+        viewModel.fetchLocalUsers()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,10 +59,15 @@ class ListActivity : BaseActivity() {
                         ), VERTICAL
                 )
         )
-        userAdapter = UserAdapter(users) {
+        userAdapter = UserAdapter(users) { user ->
             val bundle = Bundle()
-            bundle.putParcelable(Params.USER, it)
-            navigateTo(UserDetailActivity::class.java, bundle = bundle)
+            bundle.putParcelable(Params.USER, user)
+            //navigateToGet(UserDetailActivity::class.java, 1001, bundle = bundle)
+
+            val intent = Intent(this, UserDetailActivity::class.java).apply {
+                putExtras(bundle)
+            }
+            getContent.launch(intent)
         }
         scrollListener = object : EndlessRecyclerViewScrollListener(layoutManager) {
             override fun onLoadMore(page: Int, totalItemsCount: Int, view: RecyclerView?) {
@@ -94,12 +104,7 @@ class ListActivity : BaseActivity() {
         initObservers()
         binding.shimmerFrameLayout.startShimmerAnimation()
         viewModel.fetchLocalUsers()
-        fetchFromServer(0)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        viewModel.fetchLocalUsers()
+        //fetchFromServer(0)
     }
 
     /**

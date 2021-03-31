@@ -1,6 +1,7 @@
 package com.tawktest.app
 
 import android.app.Application
+import androidx.appcompat.app.AppCompatDelegate
 import com.tawktest.di.components.AppComponent
 import com.tawktest.di.components.DaggerAppComponent
 import com.tawktest.di.modules.ApiModule
@@ -23,7 +24,7 @@ class Tawktest : Application(), HasAndroidInjector {
 
     override fun onCreate() {
         super.onCreate()
-
+        //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         DaggerAppComponent.builder()
                 .application(this)
                 .appModule(AppModule())

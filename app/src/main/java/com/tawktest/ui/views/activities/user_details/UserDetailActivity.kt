@@ -1,5 +1,6 @@
 package com.tawktest.ui.views.activities.user_details
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -121,7 +122,13 @@ class UserDetailActivity : BaseActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
+        setResult(Activity.RESULT_OK)
         onBackPressed()
         return super.onSupportNavigateUp()
+    }
+
+    override fun onBackPressed() {
+        setResult(Activity.RESULT_OK)
+        super.onBackPressed()
     }
 }

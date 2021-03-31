@@ -43,6 +43,24 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     /**
+     * Start an activity for result with data and and request code
+     *
+     * @param clazz
+     * @param bundle
+     * @param requestCode
+     * */
+    public final fun <T> navigateToGet(
+        clazz: Class<T>,
+        requestCode: Int,
+        bundle: Bundle? = null
+    ) {
+        val intent = Intent(this, clazz)
+        bundle?.let { intent.putExtras(it) }
+        startActivity(intent)
+        enterAnimation()
+    }
+
+    /**
      * Check if device is connected with internet
      *
      * @return true if connected otherwise false

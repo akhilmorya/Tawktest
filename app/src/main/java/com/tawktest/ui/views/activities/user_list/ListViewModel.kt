@@ -1,5 +1,7 @@
 package com.tawktest.ui.views.activities.user_list
 
+import android.os.Handler
+import android.os.Looper
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -22,7 +24,16 @@ class ListViewModel @Inject constructor(private val apis: Apis, private val data
      * */
     fun fetchLocalUsers() {
         Thread {
-            usersLive.postValue(Resource.success(database.getUserDao().getUsers()))
+            val users = database.getUserDao().getUsers()
+            if (users.isEmpty()) {
+                Handler(Looper.getMainLooper()).post {
+                    // Accessing main thread, we have used LiveData setValue method in fetchUsers(Int,Int) method so
+                    // Otherwise app will crash
+                    fetchUsers(0,15)
+                }
+            } else {
+                usersLive.postValue(Resource.success(database.getUserDao().getUsers()))
+            }
         }.start()
     }
 
